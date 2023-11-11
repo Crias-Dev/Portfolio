@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <title>
+            Crias Dev Portfolio
+        </title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <center>
+            <h1 class="portfolio" id="playSound">
+                Crias Devs Portfolio
+            </h1>
+            <div class="horizontal-menu">
+                <a href="#Fnaf" class="menu-item fontefnaf" onclick = "smoothScroll('#Fnaf')">FNAF</a>
+                <a href="#Slipknot" class="menu-item fonteslip" onclick = "smoothScroll('#Slipknot')">Slipknot</a>
+                <a href="#TheFlash" class="menu-item fonteflash" onclick = "smoothScroll('#TheFlash')">The Flash</a>
+                <a href="#Porsche" class="menu-item fonteporsche"onclick = "smoothScroll('#Porsche')">Porsche</a>
+            </div>
+        </center>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <center>
+            <div class="container" style="background: black; width: 80%;">
+                <div class="text">
+                    <center>
+                        <h2 class="fnaf" id="Fnaf">
+                            Fnaf site
+                        </h2>
+                        <hr>
+                        <p class="fnaf-text">  
+                        "Five Nights at Freddy's" (FNaF) is a popular indie horror game series created by Scott Cawthon. The first game was released in 2014 and quickly gained widespread attention for its unique gameplay mechanics and eerie atmosphere. The series has since expanded to include multiple sequels, spin-off games, novels, and even merchandise.
+                        </p>
+                        <br>
+                        <br>
+                        <a href="https://crias-dev.github.io/Fnaf-History-Site/" target="_blank"> 
+                            <button class="fnaf-button">
+                                Site
+                            </button>
+                        </a>
+                    </center>
+                </div>
+                <div class="content">
+                    <img src="Fnaf.png" class="fnaf-img">
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="container" style="background: black; width: 80%;">
+                <div class="content">
+                    <img src="slipknot.png" class="fnaf-img">
+                </div>
+                <div class="text">
+                    <center>
+                        <h2 class="slipknot" id="Slipknot">
+                            Slipknot site
+                        </h2>
+                        <hr>
+                        <p class="fnaf-text">  
+                            Slipknot is an American heavy metal band known for its aggressive musical style, distinctive image, and energetic live performances. The band was formed in Des Moines, Iowa, in 1995 and quickly gained attention for its chaotic and theatrical stage presence, which includes members wearing matching jumpsuits, unique masks, and engaging in intense, energetic performances.
+                        </p>
+                        <br>
+                        <br>
+                        <a href="https://crias-dev.github.io/Slipknot-site/" target="_blank"> 
+                            <button class="slipknot-button">
+                                Site
+                            </button>
+                        </a>
+                    </center>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="container" style="background: black; width: 80%;">
+                <div class="text">
+                    <center>
+                        <h2 class="theflash" id="TheFlash">
+                            The Flash site
+                        </h2>
+                        <hr>
+                        <p class="fnaf-text">  
+                            Barry Allen first appeared in "Showcase" #4 in 1956, created by writer Robert Kanigher and artist Carmine Infantino. Barry Allen is a forensic scientist who gains super-speed abilities after a laboratory accident involving a lightning strike and chemicals. Inspired by the Golden Age Flash, Jay Garrick, Barry becomes the Scarlet Speedster known as The Flash.
+                        </p>
+                        <br>
+                        <br>
+                        <a href="https://crias-dev.github.io/The-Flash-site/" target="_blank"> 
+                            <button class="theflash-button">
+                                Site
+                            </button>
+                        </a>
+                    </center>
+                </div>
+                <div class="content">
+                    <img src="theflash.png" class="fnaf-img">
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="container" style="background: black; width: 80%;">
+                <div class="content">
+                    <img src="porsche.png" class="fnaf-img">
+                </div>
+                <div class="text">
+                    <center>
+                        <h2 class="porsche" id="Porsche">
+                            Porsche site
+                        </h2>
+                        <hr>
+                        <p class="fnaf-text">  
+                            Porsche is a German luxury sports car and SUV manufacturer known for producing high-performance vehicles. The company was founded in 1931 by Ferdinand Porsche and is headquartered in Stuttgart, Germany. Porsche has a long and prestigious history in the automotive industry, and it is considered one of the most iconic and recognizable brands in the sports car segment.
+                        </p>
+                        <br>
+                        <br>
+                        <a href="https://crias-dev.github.io/Porsche-site/" target="_blank"> 
+                            <button class="porsche-button">
+                                Site
+                            </button>
+                        </a>
+                    </center>
+                </div>
+            </div>
+        </center>
+        <br>
+        <br>
+        <center>
+            <h1 class="theflash">
+                About us
+            </h1>
+        </center>
+        <script>
+            function smoothScroll(target) {
+                const targetElement = document.querySelector(target);
+                const targetPosition = targetElement.offsetTop;
+                const startPosition = window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                const duration = 2000;
+                let startTime;
+      
+                function animation(currentTime) {
+                    if (!startTime) startTime = currentTime;
+                    const progress = currentTime - startTime;
+                    const easing = easeInOutCubic(progress, startPosition, distance, duration);
+                    window.scrollTo(0, easing);
+                    if (progress < duration) requestAnimationFrame(animation);
+                }
+      
+                function easeInOutCubic(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t * t + b;
+                    t -= 2;
+                    return c / 2 * (t * t * t + 2) + b;
+                }
+                requestAnimationFrame(animation);
+            }
+        </script>
+    </body>
+</html>

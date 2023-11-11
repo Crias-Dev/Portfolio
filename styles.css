@@ -1,0 +1,226 @@
+body {
+    background-image: linear-gradient(to right bottom, #051937, #002235, #00282a, #102b1f, #272c1b);
+}
+
+@font-face {
+    font-family: FnafFont;
+    src: url(5Computers-In-Love.ttf);
+}
+
+@font-face {
+    font-family: Slipknot;
+    src: url(Sickness.ttf);
+}
+
+@font-face {
+    font-family: TheFlash;
+    src: url(Elements.ttf);
+}
+
+@font-face {
+    font-family: Porsche;
+    src: url(911porschav3.ttf);
+}
+
+@font-face {
+    font-family: God;
+    src: url(GODOFWAR.TTF);
+}
+
+.fontefnaf{
+    font-family: FnafFont;
+}
+
+.fonteslip{
+    font-family: Slipknot;
+}
+
+.fonteflash{
+    font-family: TheFlash;
+}
+
+.fonteporsche{
+    font-family: Porsche;
+}
+
+.horizontal-menu {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-top: 0;
+    position: sticky;
+    width: 100%;
+    z-index: 1000;
+    top: 65px;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    transition: 0.1s;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.menu-item:hover {
+    color: yellow;
+    font-size: 20px;
+}
+
+.portfolio {
+    font-family: God;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0; /* Change this value to 0 or any other value that suits your design */
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+    background: #CF1020;
+    position: sticky;
+    width: 100%;
+    z-index: 1001;
+    top: 0;
+}
+
+h1 {
+    margin: 0;
+    font-family: Axe;
+}
+
+.container {
+    display: flex;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.text {
+    flex: 1;
+}
+
+.content {
+    flex: 1;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.fnaf-img {
+    width: 100%; /* Ensures the image takes the full width of its container */
+    height: auto; /* Maintains the image's aspect ratio */
+    border-radius: 10px;
+}
+
+.fnaf {
+    font-family: FnafFont;
+    color: rgb(155, 0, 0);
+}
+
+.slipknot {
+    font-family: Slipknot;
+    color: white;
+    font-size: 30px;
+}
+
+.fnaf-text {
+    color: white;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.fnaf-button {
+    font-family: FnafFont;
+    width: 90px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 5px;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all;
+    transition: all 0.3s;
+    background: rgb(155, 0, 0);
+}
+
+.fnaf-button:hover {
+    cursor: pointer;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.slipknot-button {
+    font-family: Slipknot;
+    font-size: 20px;
+    width: 90px;
+    height: 50px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all;
+    transition: all 0.3s;
+    background: red;
+}
+
+.slipknot-button:hover {
+    cursor: pointer;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.theflash {
+    font-family: TheFlash;
+    color: white;
+    font-size: 30px;
+}
+
+.theflash-button {
+    font-family: TheFlash;
+    font-size: 20px;
+    width: 90px;
+    height: 50px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all;
+    transition: all 0.3s;
+    background: #CF1020;
+}
+
+.theflash-button:hover {
+    cursor: pointer;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.porsche {
+    font-family: Porsche;
+    color: white;
+    font-size: 30px;
+}
+
+.porsche-button {
+    font-family: Porsche;
+    font-size: 20px;
+    width: 90px;
+    height: 50px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all;
+    transition: all 0.3s;
+    background: gray;
+}
+
+.porsche-button:hover {
+    cursor: pointer;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
