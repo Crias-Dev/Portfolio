@@ -7,18 +7,37 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+        <script src="javascript.js"></script>
     </head>
     <body>
+        <div class="menu-container">
+            <div class="sidebar-link-menu">
+                <img class="menu" src="menu (1).png">
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="sidebar-link">
+                <a href="#Fnaf" class="menu-item fontefnaf" onclick = "smoothScroll('#Fnaf')">FNAF</a>
+            </div>
+            <div class="sidebar-link">
+                <a href="#Slipknot" class="menu-item fonteslip" onclick = "smoothScroll('#Slipknot')">Slipknot</a>
+            </div>
+            <div class="sidebar-link">
+                <a href="#TheFlash" class="menu-item fonteflash" onclick = "smoothScroll('#TheFlash')">The Flash</a>
+            </div>
+            <div class="sidebar-link">
+                <a href="#Porsche" class="menu-item fonteporsche"onclick = "smoothScroll('#Porsche')">Porsche</a>
+            </div>
+            <div class="sidebar-link">
+                <a href="#About" class="menu-item about-us"onclick = "smoothScroll('#About')">About us</a>
+            </div>
+        </div>
         <center>
             <h1 class="portfolio" id="playSound">
                 Crias Devs Portfolio
             </h1>
-            <div class="horizontal-menu">
-                <a href="#Fnaf" class="menu-item fontefnaf" onclick = "smoothScroll('#Fnaf')">FNAF</a>
-                <a href="#Slipknot" class="menu-item fonteslip" onclick = "smoothScroll('#Slipknot')">Slipknot</a>
-                <a href="#TheFlash" class="menu-item fonteflash" onclick = "smoothScroll('#TheFlash')">The Flash</a>
-                <a href="#Porsche" class="menu-item fonteporsche"onclick = "smoothScroll('#Porsche')">Porsche</a>
-            </div>
         </center>
         <br>
         <br>
@@ -136,9 +155,88 @@
         <br>
         <br>
         <center>
-            <h1 class="theflash">
+            <h1 class="about" id="About">
                 About us
             </h1>
+        </center>
+        <center>
+            <div class="container-members">
+                <div class="members upper-left">
+                    <div class="container-image">
+                        <img src="avatars/not_zeetaa.jpg" class="image-avatar">
+                    </div>
+                    <div class="container-text">
+                        <h2 class="avatar-h2">
+                            NotZeetaa
+                        </h2>
+                        <p class="member-text">
+                            A dude that likes dogs and cats and also programming ofc :)
+                        </p>
+                        <br>
+                        <center>
+                            <a href="https://github.com/NotZeetaa" target="_blank" style="text-decoration: none;">
+                                <img src="icons/github-better.png" class="github-icon">
+                            </a>
+                            <a href="https://xdaforums.com/m/zeetaa.10325641/" target="_blank" style="text-decoration: none;">
+                                <img src="icons/xda-developers-white.svg" class="xda-icon">
+                            </a>
+                            <a href="https://t.me/NotZeetaa" target="_blank" style="text-decoration: none;">
+                                <img src="icons/telegram-white.svg" class="telegram-icon">
+                            </a>
+                        </center>
+                    </div>
+                </div>
+                <div class="members upper-right">
+                    <div class="container-image">
+                        <img src="avatars/souza.jpeg" class="image-avatar">
+                    </div>
+                    <div class="container-text">
+                        <h2 class="avatar-h2">
+                            Souza
+                        </h2>
+                        <p class="member-text">
+                            A dude that likes to listen Slipknot (i think its a bad hobbie but ok) and ofc likes html/css/javascript too :)
+                        </p>
+                        <center>
+                            <a href="https://github.com/souzaisrage" target="_blank" style="text-decoration: none;">
+                                <img src="icons/github-better.png" class="github-icon">
+                            </a>
+                        </center>
+                    </div>
+                </div>
+                <div class="members bottom-left">
+                    <div class="container-image">
+                        <img src="avatars/l31rb6.jpg" class="image-avatar">
+                    </div>
+                    <div class="container-text">
+                        <h2 class="avatar-h2">
+                            L31RB4
+                        </h2>
+                        <p class="member-text">
+                            A dude that loves cars (but hates tesla, which i think its a bad behaviour) and blonde chicks :)
+                        </p>
+                        <center>
+                            <a href="https://github.com/l31rb4" target="_blank" style="text-decoration: none;">
+                                <img src="icons/github-better.png" class="github-icon">
+                            </a>
+                        </center>
+                        
+                    </div>
+                </div>
+                <div class="members bottom-right">
+                    <div class="container-image">
+                        <img src="avatars/padilha.jpg" class="image-avatar">
+                    </div>
+                    <div class="container-text">
+                        <h2 class="avatar-h2">
+                            Padilha
+                        </h2>
+                        <p class="member-text">
+                            A dude that thinks he is top 1 from Brazil but he actually he is the top 1 of the worst players :)
+                        </p>
+                    </div>
+                </div>
+            </div>
         </center>
         <script>
             function smoothScroll(target) {
@@ -148,7 +246,7 @@
                 const distance = targetPosition - startPosition;
                 const duration = 2000;
                 let startTime;
-      
+        
                 function animation(currentTime) {
                     if (!startTime) startTime = currentTime;
                     const progress = currentTime - startTime;
@@ -156,7 +254,7 @@
                     window.scrollTo(0, easing);
                     if (progress < duration) requestAnimationFrame(animation);
                 }
-      
+        
                 function easeInOutCubic(t, b, c, d) {
                     t /= d / 2;
                     if (t < 1) return c / 2 * t * t * t + b;

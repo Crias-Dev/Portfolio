@@ -1,5 +1,10 @@
 body {
     background-image: linear-gradient(to right bottom, #051937, #002235, #00282a, #102b1f, #272c1b);
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 300px;
 }
 
 @font-face {
@@ -41,19 +46,72 @@ body {
 
 .fonteporsche{
     font-family: Porsche;
+    font-size: 13px;
 }
 
-.horizontal-menu {
-    background-color: #333;
+.sidebar {
+    position: fixed;
+    top: 70px;
+    z-index: 1002;
+    width: 100px;
+    overflow-x: hidden;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1002;
+    width: 100px;
+}
+
+/* Add media query for responsiveness */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar-link {font-size: 18px;}
+}
+
+.sidebar-link-menu {
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    text-align: center;
+    flex: 1;
+}
+
+.sidebar-link {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #CF1020;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #000000;
+}
+
+.menu {
+    height: 35px;
     margin-top: 0;
-    position: sticky;
-    width: 100%;
-    z-index: 1000;
-    top: 65px;
+    margin-bottom: 0;
+    color: white;
+}
+
+.menu:hover{
+    cursor: pointer;
 }
 
 .menu-item {
@@ -63,17 +121,23 @@ body {
     transition: 0.1s;
     padding-left: 10px;
     padding-right: 10px;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all;
+    transition: all 0.3s;
 }
 
 .menu-item:hover {
-    color: yellow;
-    font-size: 20px;
+    -moz-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
 }
 
 .portfolio {
     font-family: God;
+    margin-left: 0;
     margin-top: 0;
-    padding-top: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
     margin-bottom: 0; /* Change this value to 0 or any other value that suits your design */
     font-weight: bold;
     font-size: 50px;
@@ -83,11 +147,14 @@ body {
     width: 100%;
     z-index: 1001;
     top: 0;
+    left: 0;
+    right: 0;
 }
 
 h1 {
     margin: 0;
     font-family: Axe;
+    padding-left: 0;
 }
 
 .container {
@@ -201,7 +268,6 @@ h1 {
 .porsche {
     font-family: Porsche;
     color: white;
-    font-size: 30px;
 }
 
 .porsche-button {
@@ -223,4 +289,141 @@ h1 {
     -moz-transform: scale(1.2);
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
+}
+
+.container-members {
+    width: 67%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 350px;
+}
+
+.upper-left {
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all;
+    transition: all 0.2s;
+    background: black;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.upper-right {
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all;
+    transition: all 0.2s;
+    background: black;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.bottom-left {
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all;
+    transition: all 0.2s;
+    background: black;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.bottom-right {
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all;
+    transition: all 0.2s;
+    background: black;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.container-image {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.image-avatar {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.avatar-h2 {
+    color: white;
+    text-align: center;
+    font-family: Roboto, Arial;
+}
+
+.container-text {
+    flex: 1;
+    text-align: left;
+    height: 100%;
+    max-height: 100%;
+}
+
+h1 {
+    font-family: Roboto, Arial;
+    font-size: 30px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.member-text {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    color: white;
+    font-family: Roboto, Arial;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 25px;
+}
+
+.github-icon {
+    height: 40px; 
+    margin-right: 5px;
+    transition: all 0.4s;
+}
+
+.github-icon:hover {
+    height: 45px;
+}
+
+.xda-icon {
+    height: 35px; 
+    margin-right: 5px;
+    transition: all 0.4s;
+}
+
+.xda-icon:hover {
+    height: 40px;
+}
+
+.telegram-icon {
+    height: 40px;
+    transition: all 0.4s;
+}
+
+.telegram-icon:hover {
+    height: 45px;
+}
+
+.about-us {
+    font-family: 'Inter', sans-serif;
 }
